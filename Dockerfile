@@ -43,7 +43,7 @@ RUN echo 'Cleaning up' \
 	&& rm -rf share/man \
 	&& rm -rf share/thumbnailers \
 	&& cd /usr/local \
-	&& tar cfz libvips-dev-{VIPS_VERSION}.tar.gz vips
+	&& tar cfz libvips-dev-${VIPS_VERSION}.tar.gz vips
 
 # ruby-vips needs ffi, and ffi needs the dev headers for ruby
 RUN echo "Testing" && apt-get install -y ruby-dev
